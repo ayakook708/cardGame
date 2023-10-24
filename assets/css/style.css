@@ -1,0 +1,94 @@
+/* bodyの基本設定、フォントファミリの設定、フォント基本サイズ、バックカラー */
+body {
+    font-family: 'Noto Serif JP',"Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font: 15px;
+    background: #eee;
+}
+/* header {
+} */
+header {
+    /* position: relative; */
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+svg {
+    width: 25px;
+    height: auto;
+    margin: 5px;
+}
+.menu {
+    width: 299px;
+    margin: auto;
+}
+.menu li {
+    padding: 9px;
+    font-weight: bold;
+    font-size: 19px;
+}
+.cardTable {
+    margin: auto;
+    text-align: center;
+    table-layout: fixed;
+}
+td.card {
+    background-size: contain;
+    aspect-ratio: 2 / 3;
+    width: 85px;
+    height: 120px;
+}
+td.card.back {
+    background-image: url(../cards_svg/b02.svg) !important;
+}
+/*アニメーションの定義（名前はfadeout)*/
+@keyframes fadeout{
+  40%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+td.fadeout{
+  /*使用するアニメーション名*/
+  animation-name:fadeout;
+  /*アニメーション時間*/
+  animation-duration:2s;
+  /*アニメーション終了時の挙動*/
+  animation-fill-mode:forwards; 
+}
+
+.message {
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+}
+.button {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    background: #777;
+    color: #fff;
+}
+.button:hover {
+    background: #d4a0a0;
+    box-shadow: 5px 5px 5px #fff;
+}
+.button.hidden {
+    display: none;
+}
+footer{
+    margin: 10px;
+    position: relative;
+}
+.left {
+    position: absolute;
+}
+.right {
+    position: absolute;
+    right: 0;
+}
